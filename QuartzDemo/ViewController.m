@@ -42,4 +42,8 @@
 - (IBAction)drawGraphHandler:(UIButton *)sender {
     [self performSegueWithIdentifier:@"DrawGraphViewController" sender:nil];
 }
+//颜色渐变
+- (IBAction)gridentHandler:(id)sender {
+     [self performSegueWithIdentifier:@"gradient" sender:nil];
+}
 @end

@@ -22,20 +22,28 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SKr-Zt-Ioy">
-                                <rect key="frame" x="104" y="151" width="166" height="30"/>
+                                <rect key="frame" x="51" y="151" width="273" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="DrawFreeViewController"/>
+                                <state key="normal" title="在imageView上划线，并且当成图片保存"/>
                                 <connections>
                                     <action selector="drawSomethingHandler:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WXQ-ic-7zp"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y7Z-bQ-qIr">
-                                <rect key="frame" x="98" y="353" width="178" height="30"/>
+                                <rect key="frame" x="95" y="289" width="185" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="DrawGraphViewController"/>
+                                <state key="normal" title="在view上划线和画图和渐变"/>
                                 <connections>
                                     <action selector="drawGraphHandler:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bHA-s4-GaH"/>
                                     <action selector="drawSomethingHandler:" destination="BYZ-38-t0r" eventType="touchUpInside" id="adt-ik-4v0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CBw-Fu-YcT">
+                                <rect key="frame" x="156" y="429" width="62" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="设置渐变"/>
+                                <connections>
+                                    <action selector="gridentHandler:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eaT-Zo-W58"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -44,10 +52,29 @@
                     <connections>
                         <segue destination="CPX-gI-pIS" kind="modal" identifier="DrawFreeViewController" id="kWo-vn-Xja"/>
                         <segue destination="mLc-xg-iip" kind="modal" identifier="DrawGraphViewController" id="HKR-ld-zTI"/>
+                        <segue destination="SIi-6Q-RqR" kind="modal" identifier="gradient" id="taB-k2-iL6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+        </scene>
+        <!--Gradient Controller-->
+        <scene sceneID="ZhS-qp-pHV">
+            <objects>
+                <viewController id="SIi-6Q-RqR" customClass="GradientController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="YcI-kQ-s6i"/>
+                        <viewControllerLayoutGuide type="bottom" id="T7g-ec-hpL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="uq1-lK-eaZ" customClass="gradientView">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sRg-cR-Zgj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="36" y="801"/>
         </scene>
         <!--Draw Free View Controller-->
         <scene sceneID="qPh-d3-VSV">
@@ -71,7 +98,7 @@
                                 <items>
                                     <barButtonItem style="plain" id="szR-Dl-Qbp">
                                         <segmentedControl key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="Mr3-rE-Mil">
-                                            <rect key="frame" x="16" y="8" width="227" height="29"/>
+                                            <rect key="frame" x="16" y="7.5" width="227" height="29"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <segments>
                                                 <segment title="green"/>
@@ -116,20 +143,53 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wug-Wf-bL7" customClass="DrawGraphView">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="U5y-Oc-4j6">
+                                <rect key="frame" x="56" y="28" width="190" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="线"/>
+                                    <segment title="矩形"/>
+                                    <segment title="椭圆"/>
+                                </segments>
+                                <connections>
+                                    <action selector="graphSegementChange:" destination="mLc-xg-iip" eventType="valueChanged" id="GUo-mT-LdK"/>
+                                </connections>
+                            </segmentedControl>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="lwH-NW-BMp">
+                                <rect key="frame" x="254" y="28" width="105" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="红色"/>
+                                    <segment title="蓝色"/>
+                                </segments>
+                                <connections>
+                                    <action selector="colorSegmentChange:" destination="mLc-xg-iip" eventType="valueChanged" id="ZYZ-w9-Qzx"/>
+                                </connections>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bmh-i3-Aju">
+                                <rect key="frame" x="16" y="28" width="31" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="关闭"/>
+                                <connections>
+                                    <action selector="closeDrawGraphHandler:" destination="mLc-xg-iip" eventType="touchUpInside" id="T90-xf-gz4"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="colorSegment" destination="lwH-NW-BMp" id="RxT-tj-sof"/>
+                        <outlet property="graphSegment" destination="U5y-Oc-4j6" id="MtD-fH-fGF"/>
                         <outlet property="graphView" destination="wug-Wf-bL7" id="BKz-0y-s7j"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YTI-MQ-HAi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="853.60000000000002" y="493.40329835082463"/>
+            <point key="canvasLocation" x="866" y="495"/>
         </scene>
     </scenes>
 </document>

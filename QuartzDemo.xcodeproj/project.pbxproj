@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		968DFFE81E7141D70046DBEB /* GradientController.m in Sources */ = {isa = PBXBuildFile; fileRef = 968DFFE71E7141D70046DBEB /* GradientController.m */; };
+		968DFFEE1E714A100046DBEB /* gradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = 968DFFED1E714A100046DBEB /* gradientView.m */; };
 		96CE7A3E1E7035FC000F783C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 96CE7A3D1E7035FC000F783C /* main.m */; };
 		96CE7A411E7035FC000F783C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 96CE7A401E7035FC000F783C /* AppDelegate.m */; };
 		96CE7A441E7035FC000F783C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96CE7A431E7035FC000F783C /* ViewController.m */; };
@@ -38,6 +40,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		968DFFE61E7141D70046DBEB /* GradientController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GradientController.h; sourceTree = "<group>"; };
+		968DFFE71E7141D70046DBEB /* GradientController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GradientController.m; sourceTree = "<group>"; };
+		968DFFEC1E714A100046DBEB /* gradientView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gradientView.h; sourceTree = "<group>"; };
+		968DFFED1E714A100046DBEB /* gradientView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = gradientView.m; sourceTree = "<group>"; };
 		96CE7A391E7035FC000F783C /* QuartzDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuartzDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96CE7A3D1E7035FC000F783C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		96CE7A3F1E7035FC000F783C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -118,8 +124,12 @@
 				96CE7A701E7036EA000F783C /* DrawFreeViewController.m */,
 				96CE7A721E704FEE000F783C /* DrawGraphViewController.h */,
 				96CE7A731E704FEE000F783C /* DrawGraphViewController.m */,
+				968DFFE61E7141D70046DBEB /* GradientController.h */,
+				968DFFE71E7141D70046DBEB /* GradientController.m */,
 				96CE7A751E7050CD000F783C /* DrawGraphView.h */,
 				96CE7A761E7050CD000F783C /* DrawGraphView.m */,
+				968DFFEC1E714A100046DBEB /* gradientView.h */,
+				968DFFED1E714A100046DBEB /* gradientView.m */,
 				96CE7A451E7035FC000F783C /* Main.storyboard */,
 				96CE7A481E7035FC000F783C /* Assets.xcassets */,
 				96CE7A4A1E7035FC000F783C /* LaunchScreen.storyboard */,
@@ -293,7 +303,9 @@
 			files = (
 				96CE7A441E7035FC000F783C /* ViewController.m in Sources */,
 				96CE7A411E7035FC000F783C /* AppDelegate.m in Sources */,
+				968DFFEE1E714A100046DBEB /* gradientView.m in Sources */,
 				96CE7A711E7036EA000F783C /* DrawFreeViewController.m in Sources */,
+				968DFFE81E7141D70046DBEB /* GradientController.m in Sources */,
 				96CE7A771E7050CD000F783C /* DrawGraphView.m in Sources */,
 				96CE7A3E1E7035FC000F783C /* main.m in Sources */,
 				96CE7A741E704FEE000F783C /* DrawGraphViewController.m in Sources */,
@@ -532,6 +544,7 @@
 				96CE7A681E7035FD000F783C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		96CE7A691E7035FD000F783C /* Build configuration list for PBXNativeTarget "QuartzDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -540,6 +553,7 @@
 				96CE7A6B1E7035FD000F783C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		96CE7A6C1E7035FD000F783C /* Build configuration list for PBXNativeTarget "QuartzDemoUITests" */ = {
 			isa = XCConfigurationList;
@@ -548,6 +562,7 @@
 				96CE7A6E1E7035FD000F783C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

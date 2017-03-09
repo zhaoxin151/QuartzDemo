@@ -119,7 +119,7 @@ static NSInteger _rubberWidth = 4.0f;
 }
 
 - (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    UITouch *touch = [touches anyObject];  //和allObject的区别
+    UITouch *touch = [touches anyObject];  //随机取一个值
     CGPoint currentPoint = [touch locationInView:self.view];
     
     if(!_bMove) {
